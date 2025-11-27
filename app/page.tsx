@@ -8,8 +8,8 @@ export default function Home() {
           <p className="eyebrow">Minimal ABAP visual programming</p>
           <h1>Blueprints for ABAP</h1>
           <p className="lede">
-            Start exploring ABAP statements through a clean, monochrome blueprint canvas.
-            Drag-and-drop is not required—the layout stays focused on clarity over chrome.
+            Stitch ABAP statements together by linking ports and dragging blocks into place.
+            The prototype stays monochrome so the focus is on program flow rather than chrome.
           </p>
         </div>
         <div className="legend" aria-label="Node legend">

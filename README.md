@@ -16,4 +16,8 @@ A minimal, black-and-white Next.js prototype that visualizes ABAP program flow u
 
 ## Overview
 
-The canvas highlights core ABAP statements like `START-OF-SELECTION`, `SELECT`, `LOOP AT`, and `WRITE` as connected nodes, favoring clarity over color or chrome.
+- Add nodes from the toolbar (START-OF-SELECTION, SELECT, LOOP AT, IF/ELSE, WRITE).
+- Connect an output port to an input port to draw a link and update the ABAP outline.
+- Drag nodes to rearrange the visual flow; use "Clear links" or "Reset canvas" to start fresh.
+
+The monochrome palette keeps the focus on ABAP program flow over UI chrome.

@@ -106,6 +106,75 @@ p.eyebrow {
   min-height: 360px;
   overflow: hidden;
   box-shadow: 12px 12px 0 #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.canvas__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar__group {
+  display: grid;
+  gap: 8px;
+}
+
+.toolbar__group--actions {
+  grid-auto-flow: column;
+  justify-content: end;
+}
+
+.toolbar__title {
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.toolbar__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar__button {
+  border: 2px solid #0f0f0f;
+  background: #fff;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0f0f0f;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+.toolbar__button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 #0f0f0f;
+}
+
+.toolbar__button:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 #0f0f0f;
+}
+
+.canvas__status {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.canvas__grid {
+  position: relative;
+  border: 1px dashed #0f0f0f;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 320px;
 }
 
 .canvas__nodes {
@@ -132,6 +201,7 @@ p.eyebrow {
   background: #fff;
   padding: 14px 14px 10px;
   box-shadow: 8px 8px 0 #0f0f0f;
+  cursor: grab;
 }
 
 .node header {
@@ -163,6 +233,11 @@ p.eyebrow {
   gap: 8px;
   font-size: 14px;
   color: #0f0f0f;
+  background: #fff;
+  border: 1px solid #0f0f0f;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
 }
 
 .port--in {
@@ -182,6 +257,34 @@ p.eyebrow {
   background: #fff;
 }
 
+.canvas__panel {
+  border: 1px solid #0f0f0f;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  gap: 12px;
+  align-items: start;
+  background: #fff;
+}
+
+.panel__copy {
+  margin: 4px 0 0;
+  color: #333;
+}
+
+.panel__code {
+  margin: 0;
+  background: #0f0f0f;
+  color: #f8f8f8;
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .notes {
   border-top: 1px solid #0f0f0f;
   padding-top: 12px;
@@ -196,5 +299,9 @@ p.eyebrow {
 
   .canvas {
     min-height: 420px;
+  }
+
+  .canvas__panel {
+    grid-template-columns: 1fr;
   }
 }
