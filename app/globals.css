@@ -1,0 +1,200 @@
+:root {
+  color: #0f0f0f;
+  background: #f9f9f9;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
+  color: inherit;
+}
+
+main.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+p.lede {
+  max-width: 640px;
+  color: #303030;
+}
+
+p.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #555;
+}
+
+.legend {
+  display: grid;
+  gap: 10px;
+  padding: 14px 18px;
+  border: 1px solid #0f0f0f;
+  border-radius: 12px;
+  box-shadow: 10px 10px 0 #0f0f0f;
+  background: #fff;
+  min-width: 220px;
+}
+
+.legend div {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.chip {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #0f0f0f;
+  border-radius: 99px;
+  border: 2px solid #0f0f0f;
+}
+
+.chip--outline {
+  background: transparent;
+}
+
+.canvas {
+  position: relative;
+  border: 2px solid #0f0f0f;
+  border-radius: 16px;
+  padding: 24px;
+  background: repeating-linear-gradient(
+    0deg,
+    #fff,
+    #fff 24px,
+    #f0f0f0 25px,
+    #f0f0f0 26px
+  );
+  min-height: 360px;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 #0f0f0f;
+}
+
+.canvas__nodes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas__links {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  stroke: #0f0f0f;
+  stroke-width: 2;
+}
+
+.node {
+  position: absolute;
+  min-width: 200px;
+  border: 2px solid #0f0f0f;
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px 14px 10px;
+  box-shadow: 8px 8px 0 #0f0f0f;
+}
+
+.node header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.node__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.node__description {
+  font-size: 12px;
+  color: #444;
+}
+
+.node__ports {
+  display: grid;
+  gap: 8px;
+}
+
+.port {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #0f0f0f;
+}
+
+.port--in {
+  justify-content: flex-start;
+}
+
+.port--out {
+  justify-content: flex-end;
+}
+
+.port__circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #0f0f0f;
+  border-radius: 99px;
+  background: #fff;
+}
+
+.notes {
+  border-top: 1px solid #0f0f0f;
+  padding-top: 12px;
+  color: #202020;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .canvas {
+    min-height: 420px;
+  }
+}
