@@ -1,7 +1,6 @@
 # ABAP Visual Blueprints
 
 A minimal, black-and-white Next.js prototype that visualizes ABAP program flow using blueprint-style nodes.
-You can drag blocks, wire ports, and see a stitched ABAP outline update live.
 
 ## Getting started
 
